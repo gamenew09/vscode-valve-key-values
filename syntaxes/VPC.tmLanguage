@@ -57,6 +57,7 @@
       <dict>
         <key>begin</key>
         <string>(\$Macro) (\w+)</string>
+
         <key>beginCaptures</key>
         <dict>
           <key>1</key>
@@ -71,6 +72,7 @@
             <string>variable.macro.vdf</string>
           </dict>
         </dict>
+
         <key>end</key>
         <string>[ \t]</string>
       </dict>
