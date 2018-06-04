@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>Valve Key Values</string>
+    <key>scopeName</key>
+    <string>source.vdf</string>
+    <key>fileTypes</key>
+    <array>
+      <string>vdf</string>
+    </array>
+    <key>patterns</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>comment.line.double-slash-vdf</string>
+        <key>match</key>
+        <string>\/\/.*</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>string.vdf</string>
+        <key>match</key>
+        <string>\"(?:\\.|[^"\\])*\"</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>constant.numeric.vdf</string>
+        <key>match</key>
+        <string>\b\d+</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>keyword.operator.vdf</string>
+        <key>match</key>
+        <string>\[.+\]</string>
+      </dict>
+    </array>
+  </dict>
+</plist>

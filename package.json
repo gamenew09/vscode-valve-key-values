@@ -1,0 +1,59 @@
+{
+    "name": "valve-key-values",
+    "displayName": "Valve Key Values",
+    "description": "Adds language support for Valve Key Value files. These include vdf, vpc, and vgc.",
+    "version": "0.0.1",
+    "publisher": "gamenew09",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:VDF",
+        "onLanguage:VPC"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "VDF",
+                "aliases": [ "Valve Key Values", "VDF" ],
+                "extensions": [ ".vdf" ],
+                "configuration": "./vdf.language-configuration.json"
+            },
+            {
+                "id": "VPC",
+                "aliases": [ "Valve Project Creator", "VPC" ],
+                "extensions": [ ".vpc", ".vgc" ],
+                "configuration": "./vdf.language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "VDF",
+                "scopeName": "source.vdf",
+                "path": "./syntaxes/VDF.tmLanguage"
+            },
+            {
+                "language": "VPC",
+                "scopeName": "source.vpc",
+                "path": "./syntaxes/VPC.tmLanguage"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}

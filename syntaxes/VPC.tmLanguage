@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>Valve Project Creator</string>
+
+    <key>scopeName</key>
+    <string>source.vpc</string>
+
+    <key>fileTypes</key>
+    <array>
+      <string>vpc</string>
+    </array>
+
+    <key>foldingStartMarker</key>
+    <string>{</string>
+
+    <key>foldingEndMarker</key>
+    <string>}</string>
+
+    <key>patterns</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>comment.line.double-slash-vdf</string>
+        <key>match</key>
+        <string>\/\/.*</string>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>string.vdf</string>
+        <key>begin</key>
+        <string>\"</string>
+        <key>end</key>
+        <string>\"</string>
+        
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>variable.macro.vdf</string>
+            <key>match</key>
+            <string>(\$.+?)(?=[\\/;])</string>
+          </dict>
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>constant.numeric.vdf</string>
+        <key>match</key>
+        <string>\b\d+</string>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>keyword.operator.vdf</string>
+        <key>match</key>
+        <string>\[.+\]</string>
+      </dict>
+
+      <dict>
+        <key>begin</key>
+        <string>(\$Macro) (\w+)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.vdf</string>
+          </dict>
+
+          <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>variable.macro.vdf</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>[ \t]</string>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>keyword.control.vdf</string>
+        <key>match</key>
+        <string>(\$Include)</string>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>keyword.modifer.exclude.vdf</string>
+        <key>match</key>
+        <string>-(?=\$File)</string>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>keyword.control.vdf</string>
+        <key>match</key>
+        <string>(\$\w+)</string>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
