@@ -43,6 +43,10 @@
             }
         ]
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gamenew09/vscode-valve-key-values.git"
+    },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
