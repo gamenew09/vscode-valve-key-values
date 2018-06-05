@@ -2,7 +2,7 @@
     "name": "valve-key-values",
     "displayName": "Valve Key Values",
     "description": "Adds language support for Valve Key Value files. These include vdf, vpc, and vgc.",
-    "version": "0.0.1",
+    "version": "0.0.1-syntax-only",
     "publisher": "gamenew09",
     "engines": {
         "vscode": "^1.23.0"
