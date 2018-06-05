@@ -11,3 +11,5 @@ Valve Project Creator support includes the following
  - Syntax Highlighting
  - Basic Intelisense (will be improving)
  - Basic Go To Definition for Includes (Macros are kind of supported)
+
+> If you want just syntax highlighting, you can checkout the `syntax-only` branch.
